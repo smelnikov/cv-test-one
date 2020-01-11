@@ -1,7 +1,7 @@
 from django.utils.translation import ugettext_lazy as _
 from rest_framework import HTTP_HEADER_ENCODING, authentication, exceptions
 
-from app import models
+from . import models
 
 
 def get_api_key_header(request):

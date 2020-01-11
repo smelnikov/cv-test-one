@@ -1,20 +1,17 @@
 # Quickstart
 
-Создать новое окружение
+Установить Docker
 
-    sudo apt-get install python-virtualenv
-    virtualenv --no-site-packages venv
-    source ~/venv/bin/activate
-    pip install -r requirements.txt
+https://docs.docker.com/compose/install/
 
-Применить миграции
 
-    python manage.py migrate
+Запуск
 
-Запустить локальный сервер
+    docker-compose build
+    docker-compose up -d
+    docker-compose exec web python manage.py migrate
+    docker-compose exec web python manage.py createsuperuser
 
-    python manage.py runserver http://localhost:8000/
+http://localhost:8000/ - документация API (Swagger UI)
 
-SwaggerUI: http://localhost:8000/
-
-Админ. панель: http://localhost:8000/admin/
+http://localhost:8000/admin/ - админ. панель
