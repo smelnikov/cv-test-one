@@ -128,11 +128,10 @@ SWAGGER_SETTINGS = {
    'SECURITY_DEFINITIONS': {
       'Basic': {
             'type': 'basic',
-            'scope': 'app'
       },
-      'Bearer': {
+      'ApiKey': {
             'type': 'apiKey',
-            'name': 'Authorization',
+            'name': 'ApiKey',
             'in': 'header',
       }
    }

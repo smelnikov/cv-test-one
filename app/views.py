@@ -4,7 +4,7 @@ from rest_framework import permissions, response, views
 from . import authentication, serializers
 
 
-TOKEN_SECURITY = [{'Bearer': []}]
+TOKEN_SECURITY = [{'ApiKey': []}]
 
 
 class TestView(views.APIView):
